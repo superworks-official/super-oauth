@@ -11,10 +11,10 @@
   }
 })(typeof window !== "undefined" ? window : this, function () {
   function getCredentials() {
-    const codeVerifier = generate_code_verifier();
+    const code_verifier = generate_code_verifier();
     const state = generate_state();
-    const codeChallenge = generate_code_challenge(codeVerifier);
-    return { codeVerifier, state, codeChallenge };
+    const code_challenge = generate_code_challenge(code_verifier);
+    return { code_verifier, state, code_challenge };
   }
 
   function generate_code_verifier() {
